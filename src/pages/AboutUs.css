@@ -1,0 +1,42 @@
+.about-page {
+  background-color: var(--background);
+}
+
+.about-intro {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--text-muted);
+}
+
+.about-grid {
+  margin-top: 3rem;
+}
+
+.about-card {
+  text-align: center;
+  padding: 3rem 2rem !important;
+}
+
+.about-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.about-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}

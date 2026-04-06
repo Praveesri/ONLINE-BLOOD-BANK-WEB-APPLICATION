@@ -1,0 +1,156 @@
+.home-page {
+  width: 100%;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.hero {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #F1FAEE 0%, rgba(168, 218, 220, 0.2) 100%);
+  overflow: hidden;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--secondary);
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-shape {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: var(--primary-light);
+  border-radius: 50%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.floating-card {
+  position: absolute;
+  z-index: 3;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: var(--secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.top-right {
+  top: 10%;
+  right: -5%;
+}
+
+.bottom-left {
+  bottom: 10%;
+  left: -5%;
+}
+
+.search-section {
+  background-color: var(--surface);
+}
+
+.search-box {
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  background: white;
+  margin-top: -5rem; /* overlaps the hero slightly */
+  position: relative;
+  z-index: 10;
+}
+
+.search-box h2 {
+  margin-bottom: 2rem;
+  color: var(--secondary);
+  font-size: 1.75rem;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  min-width: 250px;
+  flex: 1;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto 2.5rem;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    margin-top: 3rem;
+  }
+
+  .top-right, .bottom-left {
+    display: none;
+  }
+}
