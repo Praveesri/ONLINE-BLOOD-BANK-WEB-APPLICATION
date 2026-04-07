@@ -15,7 +15,7 @@ import AdminPanel from './pages/AdminPanel';
 
 function App() {
   return (
-    <Router>
+    <Router basename={import.meta.env.BASE_URL}>
       <div className="page-wrapper">
         <Header />
         <main className="main-content">
