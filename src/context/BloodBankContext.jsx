@@ -12,10 +12,10 @@ export const BloodBankProvider = ({ children }) => {
     const saved = localStorage.getItem('bb_donors');
     if (saved) return JSON.parse(saved);
     return [
-      { id: 1, name: 'John Doe', age: 30, bloodGroup: 'O+', contact: '123-456-7890', location: 'New York', status: 'Available' },
-      { id: 2, name: 'Jane Smith', age: 25, bloodGroup: 'A-', contact: '987-654-3210', location: 'Los Angeles', status: 'Available' },
-      { id: 3, name: 'Mike Johnson', age: 40, bloodGroup: 'B+', contact: '555-123-4567', location: 'Chicago', status: 'Donated Recently' },
-      { id: 4, name: 'Emily Davis', age: 28, bloodGroup: 'AB+', contact: '444-987-6543', location: 'New York', status: 'Available' },
+      { id: 1, name: 'John Doe', age: 30, bloodGroup: 'O+', gender: 'Male', contact: '123-456-7890', location: 'New York', address: '123 Main St, NY', history: 'Donated 2 times', medical: 'None', status: 'Available' },
+      { id: 2, name: 'Jane Smith', age: 25, bloodGroup: 'A-', gender: 'Female', contact: '987-654-3210', location: 'Los Angeles', address: '456 Oak St, LA', history: 'First time', medical: 'Low iron previously', status: 'Available' },
+      { id: 3, name: 'Mike Johnson', age: 40, bloodGroup: 'B+', gender: 'Male', contact: '555-123-4567', location: 'Chicago', address: '789 Pine St, CH', history: 'Frequent donor', medical: 'None', status: 'Donated Recently' },
+      { id: 4, name: 'Emily Davis', age: 28, bloodGroup: 'AB+', gender: 'Female', contact: '444-987-6543', location: 'New York', address: '101 Maple St, NY', history: 'Donated last year', medical: 'None', status: 'Available' },
     ];
   });
 
@@ -40,6 +40,8 @@ export const BloodBankProvider = ({ children }) => {
   const loginMode = (mode) => {
     if (mode === 'admin') {
       setCurrentUser({ id: 'admin1', name: 'Admin User', role: 'admin' });
+    } else if (mode === 'hospital') {
+      setCurrentUser({ id: 'hospital1', name: 'City Hospital', role: 'hospital' });
     } else if (mode === 'user') {
       setCurrentUser({ id: 'user1', name: 'Demo User', role: 'user' });
     } else {

@@ -1,67 +1,99 @@
-.contact-container {
+/* ===== CONTACT PAGE ===== */
+.contact-page {}
+
+/* Hero */
+.contact-hero {
+  background: linear-gradient(135deg, #0d1b2a 0%, #1b3352 60%, #2a1020 100%);
+  padding: 5rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,24,74,0.15) 0%, transparent 70%);
+  top: -100px; left: -80px;
+  pointer-events: none;
+}
+
+.contact-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Two-column layout */
+.contact-layout {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  align-items: start;
 }
 
-.contact-info-card {
-  background: var(--secondary);
-  color: white;
-}
-
-.contact-info-card h2 {
-  color: white;
-  margin-bottom: 1rem;
-}
-
-.contact-desc {
-  color: #a3b1c6;
+/* Info list */
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   margin-bottom: 2rem;
 }
 
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.contact-list li {
+.contact-info-item {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
 
-.icon-box {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-sm);
+.contact-info-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--primary-light);
+  border: 1.5px solid var(--border-soft);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.contact-list strong {
-  display: block;
-  font-size: 1.125rem;
-  margin-bottom: 0.25rem;
+.contact-info-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.2rem;
 }
 
-.contact-list p {
-  color: #a3b1c6;
-  font-size: 0.95rem;
-}
-
-.contact-form-card h2 {
-  margin-bottom: 1.5rem;
+.contact-info-value {
+  font-size: 0.9rem;
   color: var(--secondary);
+  font-weight: 500;
+  line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-  .contact-container {
+.contact-info-link {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.contact-info-link:hover {
+  text-decoration: underline;
+}
+
+/* Hospital box */
+.contact-hospital-box {
+  background: var(--primary-light);
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 }
